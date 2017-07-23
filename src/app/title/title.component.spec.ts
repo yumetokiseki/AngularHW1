@@ -42,5 +42,16 @@ describe('TitleComponent', () => {
     expect(component.GetTitle()).toBe('todos');
   });
 
+  it(`should use getTitle() in HTML`, () => {
+
+    spyOn(component,'GetTitle').and.returnValue('fake')
+
+    //component.title = 'fake';
+    fixture.detectChanges();
+
+    const element = fixture.debugElement.query(By.css('h1')).nativeElement;
+    expect(element.textContent).toBe('fake');
+  });
+
 
 });
