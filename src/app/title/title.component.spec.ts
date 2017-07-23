@@ -38,5 +38,9 @@ describe('TitleComponent', () => {
   });
 
 
+  it(`should have getTitle()`, () => {
+    expect(component.GetTitle()).toBe('todos');
+  });
+
 
 });
