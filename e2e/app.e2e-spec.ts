@@ -7,8 +7,8 @@ describe('demo App', () => {
     page = new DemoPage();
   });
 
-  it('should display welcome message', () => {
+  it(`should display 'todos' in h1`, () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getTodos()).toBe('todos');
   });
 });
