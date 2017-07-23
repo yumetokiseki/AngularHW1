@@ -14,4 +14,9 @@ export class TitleComponent implements OnInit {
 
   }
 
+  public GetTitle()
+  {
+      return this.title;
+  }
+
 }
